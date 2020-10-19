@@ -35,7 +35,9 @@ INSTALLED_APPS = [
     'cart',
     'orders',
     'administracion',
-    'home'
+    'home',
+    'about',
+    'contac'
 ]
 
 MIDDLEWARE = [
@@ -56,12 +58,12 @@ TEMPLATES = [
         'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
-            'context_processors': [
+            'context_processors': [                                
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
+                'django.contrib.auth.context_processors.auth',                
                 'django.contrib.messages.context_processors.messages',
-                'cart.context_processor.cart_total_amount',
+                'cart.context_processor.cart_total_amount'
             ],
         },
     },

@@ -1,6 +1,5 @@
 from django.db import models
 
-
 # Category Model
 class Category(models.Model):
     name = models.CharField(max_length=300)
@@ -14,7 +13,6 @@ class Category(models.Model):
         verbose_name = 'Categoría'
         verbose_name_plural = 'Categorías'
         ordering = ['-id']
-
 
 # Product Model
 class Product(models.Model):

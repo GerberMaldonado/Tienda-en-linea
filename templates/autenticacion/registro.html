@@ -1,13 +1,53 @@
-{% extends 'layouts/tienda.html' %}
-
-{% block title %}Registro{% endblock %}
-
 {% load crispy_forms_tags %}
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Registro - Aseguramiento</title>
+    {% load static%}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'images/icon/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'autenticacion/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'autenticacion/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'autenticacion/css/typography.css' %}">
+    <link rel="stylesheet" href="{% static 'autenticacion/css/default-css.css' %}">
+    <link rel="stylesheet" href="{% static 'autenticacion/css/styles.css'%}">
+</head>
+<body>
+    <!-- preloader area start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- preloader area end -->
+    <!-- login area start -->
+    <div class="login-area login-bg">
+        <div class="container">
+            <div class="login-box ptb--100">
+                <form method="POST" class="mt-2" autocomplete="off" style="padding: 3%;">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-light text-center">                            
+                            <a href="{% url 'autenticacion:acceder' %}" style="color: #000;">Regresar</a>
+                        </button>
+                        <button type="submit" class="btn btn-success text-center">Crear cuenta!</button>
+                    </div>   
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- login area end -->
+    <!-- jquery latest version -->
+    <script src="{% static 'autenticacion/js/vendor/jquery-2.2.4.min.js' %}"></script>
+    <!-- bootstrap 4 js -->
+    <script src="{% static 'autenticacion/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'autenticacion/js/metisMenu.min.js' %}"></script>
+    <script src="{% static 'autenticacion/js/jquery.slimscroll.min.js' %}"></script>
+    <script src="{% static 'autenticacion/js/jquery.slicknav.min.js' %}"></script>
+    <!-- others plugins -->
+    <script src="{% static 'autenticacion/js/scripts.js' %}"></script>
+</body>
 
-{% block content %}
-    <form method="POST" action="" class="mt-2" autocomplete="off">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="btn btn-success">Crear cuenta!</button>
-    </form>
-{% endblock %}
+</html>
+
