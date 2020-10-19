@@ -1,0 +1,94 @@
+{% extends 'administracion/index.html' %}
+
+{% block header %}
+<h5>Bienvenido</h5>
+<span>Estas es la página de inicio, aquí puedes visualizar un resumen de total de ventas, clientes etc.</span>	
+{% endblock %}
+
+{% block home %}
+    <li class="breadcrumb-item">
+        <a href="">Home</a> 																						
+    </li>	    
+{% endblock %}
+
+{% block contenido %}
+<div class="row">
+    <div class="col-xl-6 col-md-6">
+        <div class="card ticket-card">
+            <div class="card-body">
+                <a href=""><p class="m-b-30 bg-c-green lbl-card"><i class="fas fa-users"></i> Nuevo Cliente</p></a>                
+                <div class="text-center">
+
+                    <h2 class="m-b-0 d-inline-block text-c-green">0</h2>
+
+                    <p class="m-b-0 d-inline-block">Clientes</p>
+                    <p class="m-b-0 m-t-15"><i class="fas fa-caret-up m-r-10 f-18 text-c-green"></i>Del mes anterior</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6 col-md-6">
+        <div class="card ticket-card">
+            <div class="card-body">
+                <a href=""><p class="m-b-30 bg-c-yellow lbl-card"><i class="fas fa-database"></i> Nuevo Repuesto</p></a>
+                <div class="text-center">
+                    <h2 class="m-b-0 d-inline-block text-c-yellow">0</h2>
+                    <p class="m-b-0 d-inline-block">Pedidos</p>
+                    <p class="m-b-0 m-t-15"><i class="fas fa-caret-up m-r-10 f-18 text-c-yellow"></i>Del mes anterior</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-12">
+        <div class="card analytic-card card-green">
+            <div class="card-body">
+                <div class="row align-items-center m-b-30">
+                    <div class="col-auto">
+                        <i class="fas fa-shopping-cart text-c-green f-18 analytic-icon"></i>
+                    </div>
+                    <div class="col text-right">
+                        <h3 class="m-b-5 text-white">0</h3>
+                        <h6 class="m-b-0 text-white">Ventas Total </h6>
+                    </div>
+                </div>
+                <p class="m-b-0  text-white d-inline-block">Ingresos Totales : </p>
+                <h5 class=" text-white d-inline-block m-b-0 m-l-10">Q 0</h5>            
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-6">
+        <div class="card analytic-card card-blue">
+            <div class="card-body">
+                <div class="row align-items-center m-b-30">
+                    <div class="col-auto">
+                        <i class="fas fa-users text-c-blue f-18 analytic-icon"></i>
+                    </div>
+                    <div class="col text-right">
+                        <h3 class="m-b-5 text-white">1</h3>
+                        <h6 class="m-b-0 text-white">Usuarios Total </h6>
+                    </div>
+                </div>
+                <p class="m-b-0 text-white d-inline-block">Total : </p>
+                <h5 class="text-white d-inline-block m-b-0 m-l-10">1</h5>            
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-6">
+        <div class="card analytic-card card-red">
+            <div class="card-body">
+                <div class="row align-items-center m-b-30">
+                    <div class="col-auto">
+                        <i class="fas fa-file-code text-c-red f-18 analytic-icon"></i>
+                    </div>
+                    <div class="col text-right">
+                        <h3 class="m-b-5 text-white">0</h3>
+                        <h6 class="m-b-0 text-white">Ventas Totales</h6>
+                    </div>
+                </div>
+                <p class="m-b-0 d-inline-block text-white">Ingresos Totales </p>
+                <h5 class="text-white d-inline-block m-b-0 m-l-10">Q 0</h5>            
+            </div>
+        </div>
+    </div>
+</div>    
+{% endblock %}

@@ -36,14 +36,14 @@
                         <a class="nav-link" href="{% url 'order_list' %}">Mis pedidos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'salir' %}">Cerrar sesión</a>
+                        <a class="nav-link" href="{% url 'autenticacion:salir' %}">Cerrar sesión</a>
                     </li>
                 {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'acceder' %}">Acceder</a>
+                        <a class="nav-link" href="">Acceder</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'registro' %}">Registro</a>
+                        <a class="nav-link" href="{% url 'autenticacion:registro' %}">Registro</a>
                     </li>
                 {% endif %}
             </ul>

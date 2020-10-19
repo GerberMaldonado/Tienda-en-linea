@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://colorlib.com//polygon/admindek/default/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Aseguramiento de la calidad de software</title>
+<!--[if lt IE 10]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Admindek Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs.">
+	<meta name="keywords" content="flat ui, admin Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+	<meta name="author" content="colorlib">
+<style>
+	#logo{		
+		color: white;
+		text-align: center;
+	}
+</style>
+	<!-- <link rel="icon" href="https://colorlib.com//polygon/admindek/files/assets/images/favicon.ico" type="image/x-icon"> -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700" rel="stylesheet"> -->
+	{% load static%} 
+	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/bootstrap.min.css' %}">	
+	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/waves.min.css' %}" media="all">
+	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/icomoon.css' %}">	
+	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/feather.css' %}">	
+	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/font-awesome-n.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/chartist.css' %}" media="all">
+	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'Administracion/css/widget.css' %}">		
+</head>
+<body themebg-pattern="theme1">
+	<div class="loader-bg" style="display: none;">
+		<div class="loader-bar"></div>
+	</div>
+	<div id="pcoded" class="pcoded iscollapsed" nav-type="st2" theme-layout="vertical" vertical-placement="left" vertical-layout="wide" pcoded-device-type="desktop" vertical-nav-type="expanded" vertical-effect="shrink" vnavigation-view="view1" fream-type="theme1" layout-type="light">
+		<div class="pcoded-overlay-box"></div>
+		<div class="pcoded-container navbar-wrapper">
+			<nav class="navbar header-navbar pcoded-header iscollapsed" header-theme="themelight1" pcoded-header-position="fixed">
+				<div class="navbar-wrapper">
+					<div class="navbar-logo" logo-theme="theme6">						
+						<a href="">
+							<!-- <img class="img-fluid" src="./img/logo.png" alt="Theme-Logo"> -->
+							<h4 id="logo">Aseguramiento</h4>
+						</a>
+						<a class="mobile-menu" id="mobile-collapse" href="">
+							<i class="feather icon-menu icon-toggle-right"></i>
+						</a>
+						<a class="mobile-options waves-effect waves-light">
+							<i class="feather icon-more-horizontal"></i>
+						</a>
+					</div>
+					<div class="navbar-container container-fluid">
+						<ul class="nav-right">
+							<li class="header-notification">
+								<div class="dropdown-primary dropdown">
+									<div class="dropdown-toggle" data-toggle="dropdown">
+										<i class="feather icon-bell"></i>
+									</div>
+									<ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+										<li>
+											<h6>Notificaciones</h6>
+											<label class="label label-danger">Nueva</label>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="header-notification">
+								<div class="dropdown-primary dropdown">
+									<div class="displayChatbox dropdown-toggle" data-toggle="dropdown">
+										<i class="feather icon-message-square"></i>
+									</div>
+								</div>
+							</li>
+							<li class="user-profile header-notification">
+								<div class="dropdown-primary dropdown">
+									<div class="dropdown-toggle" data-toggle="dropdown">
+										<img src="{% static 'Administracion/img/avatar-4.png' %}" class="img-radius" alt="User-Profile-Image">
+										<span>{{ user.username }}</span>
+										<i class="feather icon-chevron-down"></i>
+									</div>
+									<ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+										<li>
+											<a href="">
+												<i class="feather icon-settings"></i> Configuraciones
+											</a>
+										</li>
+										<li>
+											<a href="{% url 'autenticacion:salir' %}">
+												<i class="feather icon-log-out"></i> Cerrar Sesión
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>		
+				</div>
+			</nav>
+			<div class="pcoded-main-container" style="margin-top: 70px;">
+				<div class="pcoded-wrapper">
+					<nav class="pcoded-navbar" navbar-theme="theme1" active-item-theme="theme1" sub-item-theme="theme2" active-item-style="style0" pcoded-navbar-position="fixed">
+						<div class="nav-list">
+							<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: 100%;"><div class="pcoded-inner-navbar main-menu" style="overflow: hidden; width: 100%; height: 100%;">
+								<div class="pcoded-navigation-label" menu-title-theme="theme1">Navegación</div>
+								<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">				
+								 <li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+										<a href="javascript:void(0)" class="waves-effect waves-dark">
+											<span class="pcoded-micon"><i class="fa fa-user"></i></span>
+											<span class="pcoded-mtext">Clientes</span>
+										</a>
+										<ul class="pcoded-submenu">
+											<li class="">
+												<a href="" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Lista de Clientes</span>
+												</a>
+											</li>
+											<li class="">
+												<a href="" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Registrar Clientes</span>
+												</a>
+											</li>						
+										</ul>
+									</li>
+                                  </ul>
+									<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false">
+										<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+											<a href="javascript:void(0)" class="waves-effect waves-dark">
+												<span class="pcoded-micon"><i class="fa fa-plug"></i></span>
+												<span class="pcoded-mtext">Fabricantes</span>
+											</a>
+											<ul class="pcoded-submenu">
+												<li class="">
+													<a href="" class="waves-effect waves-dark">
+														<span class="pcoded-mtext">Listar Fabricantes</span>
+													</a>
+												</li>		
+												<li class="">
+													<a href="" class="waves-effect waves-dark">
+														<span class="pcoded-mtext">Registrar Fabricantes</span>
+													</a>
+												</li>										
+											</ul>
+										</li>				
+									</ul>
+								  <ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false"> 			
+									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+										<a href="javascript:void(0)" class="waves-effect waves-dark">
+											<span class="pcoded-micon"><i class="icon-dollar"></i></span>
+											<span class="pcoded-mtext">Articulos</span>										
+										</a>
+										<ul class="pcoded-submenu">
+											<li class="">
+												<a href="" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Lista de Articulos</span>
+												</a>
+											</li>
+											<li class="">
+												<a href="" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Registrar Articulos</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+
+								<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="solid" subitem-border="false"> 			
+									<li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+										<a href="javascript:void(0)" class="waves-effect waves-dark">
+											<span class="pcoded-micon"><i class="icon-dollar"></i></span>
+											<span class="pcoded-mtext">Pedidos</span>										
+										</a>
+										<ul class="pcoded-submenu">
+											<li class="">
+												<a href="" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Lista de Pedidos</span>
+												</a>
+											</li>
+											<li class="">
+												<a href="" class="waves-effect waves-dark">
+													<span class="pcoded-mtext">Registrar Pedidos</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 186.786px;"></div>
+							<div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+						</div>
+					</nav>
+					<div class="pcoded-content">
+						<div class="page-header card">
+							<div class="row align-items-end">
+								<div class="col-lg-8">
+									<div class="page-header-title">
+										<i class="feather icon-home bg-c-blue"></i>
+										<div class="d-inline">
+											{% block header %}									
+											{% endblock %} 	
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="page-header-breadcrumb">
+										<ul class=" breadcrumb breadcrumb-title">
+											<li class="breadcrumb-item">
+												<a href="">
+													<i class="feather icon-home"></i>
+												</a>
+											</li>
+											{% block home %}									
+											{% endblock %} 																				
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pcoded-inner-content">
+							<div class="main-body">
+								<div class="page-wrapper">
+									<div class="page-body">																																													
+										{% block contenido %}									
+										{% endblock %}							
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/jquery.min.js' %}"></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/jquery-ui.min.js' %}"></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/popper.min.js' %}"></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'Administracion/js/waves.min.js' %}" type="11a888cb5720a405eee272d9-text/javascript"></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/jquery.slimscroll.js' %}"></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/modernizr.js' %}"></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/css-scrollbars.js' %}"></script>
+	<script src="{% static 'Administracion/js/pcoded.min.js' %}" type="11a888cb5720a405eee272d9-text/javascript"></script>
+	<script src="{% static 'Administracion/js/vertical-layout.min.js' %}" type="11a888cb5720a405eee272d9-text/javascript"></script>
+	<script src="{% static 'Administracion/js/jquery.mCustomScrollbar.concat.min.js' %}" type="11a888cb5720a405eee272d9-text/javascript"></script>
+	<script type="11a888cb5720a405eee272d9-text/javascript" src="{% static 'Administracion/js/script.min.js' %}"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="11a888cb5720a405eee272d9-text/javascript"></script>	
+	<script type="11a888cb5720a405eee272d9-text/javascript">
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-23581568-13');
+	</script>
+	<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="11a888cb5720a405eee272d9-|49" defer="">	
+	</script>
+</body></html>

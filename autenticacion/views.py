@@ -14,7 +14,7 @@ def acceder(request):
             usuario = authenticate(username=nombre_usuario, password=password)
             if usuario is not None:
                 login(request, usuario)
-                messages.success(request, F"Bienvenid@ de nuevo {nombre_usuario}")
+#                messages.success(request, F"Bienvenid@ de nuevo {nombre_usuario}")
                 return redirect("listado_productos")
             else:
                 messages.error(request, "Los datos son incorrectos")
@@ -48,5 +48,5 @@ class VistaRegistro(View):
 
 def salir(request):
     logout(request)
-    messages.success(request, F"Tu sesión se ha cerrado correctamente")
-    return redirect("acceder")
+#    messages.success(request, F"Tu sesión se ha cerrado correctamente")
+    return render(request, 'home/index.html')

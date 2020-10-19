@@ -6,7 +6,6 @@ from .database import MYSQL
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -17,7 +16,6 @@ SECRET_KEY = 'g&r5i=_0c()p1ml^=w65uwflolcqp3dhs0b@cczswj&dc1b1w2'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -36,6 +34,8 @@ INSTALLED_APPS = [
     'products',
     'cart',
     'orders',
+    'administracion',
+    'home'
 ]
 
 MIDDLEWARE = [
