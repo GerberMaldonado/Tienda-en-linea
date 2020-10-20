@@ -5,6 +5,25 @@ from products.models import Product
 
 User = get_user_model()
 
+class Client(models.Model):
+    name = models.CharField(max_length=100)
+    sname = models.CharField(max_length=100)
+    dpi = models.CharField(max_length=12)
+    number = models.CharField(max_length=15)    
+    address = models.CharField(max_length=200)
+    nit = models.IntegerField()
+    saldo = models.FloatField()
+    limit_credit = models.FloatField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        db_table = 'client'
+        verbose_name = 'Cliente'
+        verbose_name_plural = 'Clientes'
+        ordering = ['id']
 
 class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -18,14 +37,13 @@ class Order(models.Model):
         )["total"] or FloatField(0)
 
     def __str__(self):
-        return self.id
+        return str(self.user)
 
     class Meta:
         db_table = 'orders'
         verbose_name = 'Pedido'
         verbose_name_plural = 'Pedidos'
         ordering = ['id']
-
 
 class OrderLine(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -35,10 +53,10 @@ class OrderLine(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'{self.quantity} de {self.product.name}'
+        return str(self.order)
 
     class Meta:
         db_table = 'orderlines'
-        verbose_name = 'Línea de pedido'
-        verbose_name_plural = 'Líneas de pedidos'
+        verbose_name = 'No. pedido'
+        verbose_name_plural = 'No. pedidos'
         ordering = ['id']

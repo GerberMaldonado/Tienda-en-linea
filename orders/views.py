@@ -1,12 +1,13 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.core.mail import send_mail
-from django.shortcuts import redirect
+from django.shortcuts import redirect ,render
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.views.generic.list import ListView
 from django.views.generic import DetailView
 from .models import Order, OrderLine
+
 from cart.cart import Cart
 
 
@@ -39,6 +40,11 @@ def process_order(request):
 
     messages.success(request, "El pedido se ha creado correctamente!")
     return redirect("listado_productos")
+
+# Create your views here.
+@login_required(login_url='/autenticacion/acceder')
+def process_fact(request):
+    return render(request, 'fact/index_create_form.html')
 
 
 def send_order_email(**kwargs):

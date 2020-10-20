@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'administracion',
     'home',
     'about',
-    'contac'
+    'contac',
+    'fact'
 ]
 
 MIDDLEWARE = [

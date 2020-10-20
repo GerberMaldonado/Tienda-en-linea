@@ -1,0 +1,96 @@
+{% extends 'layouts/tienda.html' %}
+
+{% block title %}Tienda{% endblock %}
+
+{% block content %}    
+    <div class="row">
+        <div class="col-9">
+            <div class="">
+                <div class="card">
+                    <div class="card-header">			
+                        <h5>Registro de Facturacion</h5>		
+                    </div>
+                    <div class="card-block">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Nombre</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese Nombre">
+                                    <span class="messages"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Apellido</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" id="sname" name="sname" placeholder="Ingrese el Apellido">
+                                    <span class="messages"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">DPI</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" id="dpi" name="dpi" placeholder="Ingrese el DPIe">
+                                    <span class="messages"></span>
+                                </div>
+                            </div>					
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Telefono</label>
+                                <div class="col-sm-12">
+                                    <input type="number" class="form-control" id="number" name="number" placeholder="Ingrese el número teléfono">
+                                    <span class="messages"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Direccion</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="Ingrese la Dirección">
+                                    <span class="messages"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Nit</label>
+                                <div class="col-sm-12">
+                                    <input type="number" class="form-control" id="nit" name="nit" placeholder="Ingrese nit">
+                                    <span class="messages"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Saldo</label>
+                                <div class="col-sm-12">
+                                    <input type="number" class="form-control" id="saldo" name="saldo" placeholder="Ingrese nit">
+                                    <span class="messages"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Saldo</label>
+                                <div class="col-sm-12">
+                                    <input type="number" class="form-control" id="limit_credit" name="limit_credit" placeholder="Ingrese nit">
+                                    <span class="messages"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-2"></label>
+                                <div class="col-sm-12 text-center">
+                                    <button type="submit" class="btn btn-primary m-b-0">Registrar</button>                                                              
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if user.is_authenticated %}
+        <div class="col-3">
+            {% include "cart/widget.html" %}
+        </div>
+        {% else %}                            
+
+        {% endif %}  
+     
+    </div>
+{% endblock %}
